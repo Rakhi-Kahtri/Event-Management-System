@@ -63,7 +63,8 @@ router.post('/events', async (req, res) => {
   }
   try {
     const result = await Pool.query(
-      'INSERT INTO events (event_title, description, date, event_type, venue_id, org_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',
+      `INSERT INTO events (event_title, description, date, event_type, venue_id, org_id) VALUES ($1, $2, $3, $4, $5, $6)
+       RETURNING *`,
       [event_title, description || null, date, event_type, venue_id || null, org_id || null]
     );
     res.status(201).json({ message: "Event added", event: result.rows[0] });
@@ -109,7 +110,8 @@ router.post('/tickets', async (req, res) => {
   }
   try {
     const result = await Pool.query(
-      'INSERT INTO tickets (event_id, par_id, ticket_type, ticket_price, issue_date) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+      `INSERT INTO tickets (event_id, par_id, ticket_type, ticket_price, issue_date) VALUES ($1, $2, $3, $4, $5)
+       RETURNING *`,
       [event_id, par_id, ticket_type, ticket_price, issue_date]
     );
     res.status(201).json({ message: "Ticket added", ticket: result.rows[0] });
