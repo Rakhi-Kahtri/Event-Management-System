@@ -9,7 +9,6 @@ fetch(FEEDBACK_API)
   })
   .then(data => {
     const tbody = document.querySelector("#feedbacktable tbody");
-
     data.forEach(feedback => {
       const row = document.createElement("tr");
 
@@ -20,7 +19,6 @@ fetch(FEEDBACK_API)
         <td>${feedback.rating}</td>
         <td>${feedback.comments}</td>
       `;
-
       tbody.appendChild(row);
     });
   })

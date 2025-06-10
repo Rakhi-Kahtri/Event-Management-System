@@ -7,7 +7,6 @@ fetch(Session_API_LINK)
   })
   .then(data => {
     const tbody = document.querySelector("#sessiontable tbody");
-
     data.forEach(session => {
       const row = document.createElement("tr");
 
@@ -19,7 +18,6 @@ fetch(Session_API_LINK)
         <td>${new Date(session.start_time).toLocaleString()}</td>
         <td>${new Date(session.end_time).toLocaleString()}</td>
       `;
-
       tbody.appendChild(row);
     });
   })

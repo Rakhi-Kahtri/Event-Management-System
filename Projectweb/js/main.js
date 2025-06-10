@@ -8,7 +8,6 @@ const entityNames = [
   "participants",
   "tickets",
   "sessions",
-  
   "sponsors",
   "staff",
   "payments",
