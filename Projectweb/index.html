@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Management Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .hover-glow:hover {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
+    }
+    .hover-glow-green:hover {
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.4);
+    }
+    .hover-glow-purple:hover {
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.6), 0 0 30px rgba(168, 85, 247, 0.4);
+    }
+    .hover-glow-pink:hover {
+      box-shadow: 0 0 15px rgba(244, 114, 182, 0.6), 0 0 30px rgba(244, 114, 182, 0.4);
+    }
+    .hover-glow-orange:hover {
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="text-center py-8">
+    <h1 class="text-4xl font-extrabold text-white tracking-wide">Event Management System</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container mx-auto px-4 pb-10">
+
+    <!-- Button Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-5 mb-12">
+      <a href="venue.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow">
+        <span class="text-lg font-semibold">Venue</span>
+      </a>
+      <a href="organizer.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-green">
+        <span class="text-lg font-semibold">Organizer</span>
+      </a>
+      <a href="event.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-purple">
+        <span class="text-lg font-semibold">Event</span>
+      </a>
+      <a href="participant.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow">
+        <span class="text-lg font-semibold">Participant</span>
+      </a>
+      <a href="ticket.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-orange">
+        <span class="text-lg font-semibold">Ticket</span>
+      </a>
+      <a href="session.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-purple">
+        <span class="text-lg font-semibold">Session</span>
+      </a>
+      <a href="sponsor.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-green">
+        <span class="text-lg font-semibold">Sponsor</span>
+      </a>
+      <a href="staff.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow">
+        <span class="text-lg font-semibold">Staff</span>
+      </a>
+      <a href="payment.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-orange">
+        <span class="text-lg font-semibold">Payment</span>
+      </a>
+      <a href="feedback.html" class="bg-slate-700 text-white p-5 rounded-xl shadow-md text-center transform transition-all duration-300 hover:scale-105 hover-glow-pink">
+        <span class="text-lg font-semibold">Feedback</span>
+      </a>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gray-800 rounded-xl shadow-lg p-6">
+        <h2 class="text-xl font-semibold mb-4 text-white">Entity Counts (Bar Chart)</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="bg-gray-800 rounded-xl shadow-lg p-6">
+        <h2 class="text-xl font-semibold mb-4 text-white">Feedback Ratings (Pie Chart)</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-white-400 text-sm border-t border-gray-700">
+    Developed by Rakhi Khatri | Event Management System Project
+  </footer>
+
+  <!-- Script -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

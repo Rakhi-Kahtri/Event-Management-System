@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report Summary</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Event Management Report Summary</h1>
+
+  <div id="counts">
+    <p>Venues: <span id="venues-count">0</span></p>
+    <p>Organizers: <span id="organizers-count">0</span></p>
+    <p>Events: <span id="events-count">0</span></p>
+    <p>Participants: <span id="participants-count">0</span></p>
+    <p>Tickets: <span id="tickets-count">0</span></p>
+    <p>Sessions: <span id="sessions-count">0</span></p>
+    <p>Sponsors: <span id="sponsors-count">0</span></p>
+    <p>Staff: <span id="staff-count">0</span></p>
+    <p>Payments: <span id="payments-count">0</span></p>
+    <p>Feedback: <span id="feedback-count">0</span></p>
+  </div>
+
+  <div>
+    <h2>Bar Chart - Entity Counts</h2>
+    <canvas id="barChart"></canvas>
+  </div>
+
+  <div>
+    <h2>Pie Chart - Feedback Distribution</h2>
+    <canvas id="pieChart"></canvas>
+  </div>
+
+  <script src="./js/report.js"></script>
+</body>
+</html>
